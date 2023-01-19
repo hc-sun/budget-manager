@@ -1,11 +1,11 @@
 import "./PurchaseItem.css";
 
-function PurchaseItem() {
+function PurchaseItem(props) {
   return (
     <div className="purchase-item">
-      <div>Jan 20th 2023</div>
-      <h2 className="purchase-item-description">Food</h2>
-      <div className="purchase-item-price">$12.34</div>
+      <div>{props.date.toISOString()}</div>
+      <h2 className="purchase-item-description">{props.title}</h2>
+      <div className="purchase-item-price">${props.amount}</div>
     </div>
   );
 }
