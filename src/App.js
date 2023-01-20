@@ -1,4 +1,4 @@
-import PurchaseItem from "./components/PurchaseItem";
+import Purchases from "./components/Purchases";
 
 function App() {
   const purchases = [
@@ -10,26 +10,7 @@ function App() {
   return (
     <div>
       <h1>React App</h1>
-      <PurchaseItem
-        title={purchases[0].title}
-        amount={purchases[0].amount}
-        date={purchases[0].date}
-      ></PurchaseItem>
-      <PurchaseItem
-        title={purchases[1].title}
-        amount={purchases[1].amount}
-        date={purchases[1].date}
-      ></PurchaseItem>
-      <PurchaseItem
-        title={purchases[2].title}
-        amount={purchases[2].amount}
-        date={purchases[2].date}
-      ></PurchaseItem>
-      <PurchaseItem
-        title={purchases[3].title}
-        amount={purchases[3].amount}
-        date={purchases[3].date}
-      ></PurchaseItem>
+      <Purchases items={purchases} />
     </div>
   );
 }
