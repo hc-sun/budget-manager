@@ -1,13 +1,16 @@
 import "./PurchaseItem.css";
 import PurchaseDate from "./PurchaseDate";
+import Card from "./Card";
 
 function PurchaseItem(props) {
   return (
-    <div className="purchase-item">
-      <PurchaseDate date={props.date}/>
-      <h2 className="purchase-item-description">{props.title}</h2>
-      <div className="purchase-item-price">${props.amount}</div>
-    </div>
+    <Card className="purchase-item">
+      <PurchaseDate date={props.date} />
+      <div className="purchase-item-description">
+        <h2>{props.title}</h2>
+        <div className="purchase-item-price">${props.amount}</div>
+      </div>
+    </Card>
   );
 }
 
