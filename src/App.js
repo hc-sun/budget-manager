@@ -1,4 +1,5 @@
 import Purchases from "./components/Purchases/Purchases";
+import AddPurchase from "./components/AddPurchase/AddPurchase";
 
 const App = () => {
   const purchases = [
@@ -9,10 +10,10 @@ const App = () => {
   ];
   return (
     <div>
-      <h1>React App</h1>
+      <AddPurchase />
       <Purchases items={purchases} />
     </div>
   );
-}
+};
 
 export default App;

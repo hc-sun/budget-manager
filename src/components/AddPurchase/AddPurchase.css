@@ -1,0 +1,38 @@
+.add-purchase {
+  background-color: #977dec;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.add-purchase button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #3b0255;
+  background-color: #3b0255;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.add-purchase button:hover,
+.add-purchase button:active {
+  background-color: #3b0255;
+  border-color: #3b0255;
+}
+
+.add-purchase button.alternative {
+  color: #14001d;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.add-purchase button.alternative:hover,
+.add-purchase button.alternative:active {
+  background-color: #d4adec;
+}
