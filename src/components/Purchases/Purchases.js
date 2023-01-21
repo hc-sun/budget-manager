@@ -1,6 +1,6 @@
 import PurchaseItem from "./PurchaseItem";
 import "./Purchases.css";
-import Card from './Card';
+import Card from '../UI/Card';
 
 function Purchases(props) {
   return (

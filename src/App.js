@@ -1,6 +1,6 @@
-import Purchases from "./components/Purchases";
+import Purchases from "./components/Purchases/Purchases";
 
-function App() {
+const App = () => {
   const purchases = [
     { id: "00", title: "Food0", amount: 2342.5, date: new Date(2022, 1, 1) },
     { id: "01", title: "Food1", amount: 2342.5, date: new Date(2022, 1, 1) },
