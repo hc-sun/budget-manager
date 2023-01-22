@@ -18,16 +18,25 @@ function PurchaseForm() {
     setDate(event.target.value);
   }
 
+  function submitForm(event) {
+    event.preventDefault();
+    const formData = {formTitle: title, formAmout: amount, formDate: new Date(date)};
+    console.log(formData);
+    setTitle('');
+    setAmount('');
+    setDate('');
+  }
+
   return (
-    <form>
+    <form onSubmit={submitForm}>
       <div className="add-purchase-controls">
         <div className="add-purchase-control">
           <label>Title</label>
-          <input type="text" onChange={titleChange} />
+          <input type="text" value={title} onChange={titleChange} />
         </div>
         <div className="add-purchase-control">
           <label>Amount</label>
-          <input type="number" onChange={amountChange} />
+          <input type="number" value={amount} onChange={amountChange} />
         </div>
         <div className="add-purchase-control">
           <label>Date</label>
@@ -35,6 +44,7 @@ function PurchaseForm() {
             type="date"
             min="2020-01-01"
             max="2025-12-31"
+            value="date"
             onChange={dateChange}
           />
         </div>
