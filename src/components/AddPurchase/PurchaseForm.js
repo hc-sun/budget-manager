@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./PurchaseForm.css";
 
-function PurchaseForm() {
+function PurchaseForm(props) {
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
@@ -21,7 +21,7 @@ function PurchaseForm() {
   function submitForm(event) {
     event.preventDefault();
     const formData = {formTitle: title, formAmout: amount, formDate: new Date(date)};
-    console.log(formData);
+    props.updateForm(formData);
     setTitle('');
     setAmount('');
     setDate('');

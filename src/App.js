@@ -8,9 +8,14 @@ const App = () => {
     { id: "02", title: "Food2", amount: 2342.5, date: new Date(2022, 1, 1) },
     { id: "03", title: "Food3", amount: 2342.5, date: new Date(2022, 1, 1) },
   ];
+
+  function updatePurchaseHandler(purchase) {
+    console.log(purchase)
+  }
+
   return (
     <div>
-      <AddPurchase />
+      <AddPurchase updatePurchase={updatePurchaseHandler} />
       <Purchases items={purchases} />
     </div>
   );
