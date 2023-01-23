@@ -4,10 +4,10 @@ import PurchaseForm from "./PurchaseForm";
 
 function AddPurchase(props) {
   function updateFormHandler(inputData) {
-    const formData = {
+    const newFormData = {
       ...inputData, id: Math.random().toString()
     };
-    props.updatePurchase(formData);
+    props.updatePurchase(newFormData);
   }
 
   return (

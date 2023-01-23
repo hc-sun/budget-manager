@@ -10,7 +10,6 @@ function Purchases(props) {
   function selectYearHandler(year) {
     setYear(year);
   }
-
   return (
     <div>
       <Card className="purchases">
@@ -21,7 +20,7 @@ function Purchases(props) {
         {props.items.map((purchase) => (
           <PurchaseItem
             title={purchase.title}
-            amount={purchase.amount}
+            price={purchase.price}
             date={purchase.date}
           />
         ))}
