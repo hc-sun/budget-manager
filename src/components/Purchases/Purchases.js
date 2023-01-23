@@ -19,6 +19,7 @@ function Purchases(props) {
         />
         {props.items.map((purchase) => (
           <PurchaseItem
+            key={purchase.id}
             title={purchase.title}
             price={purchase.price}
             date={purchase.date}
