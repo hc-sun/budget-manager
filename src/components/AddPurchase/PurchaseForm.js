@@ -54,6 +54,7 @@ function PurchaseForm(props) {
         </div>
       </div>
       <div className="add-purchase-actions">
+        <button type="button" onClick={props.onCancelEdit}>Cancel</button>
         <button type="submit">Add Purchase</button>
       </div>
     </form>
