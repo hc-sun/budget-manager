@@ -1,0 +1,40 @@
+.graph {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #edd6f3;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+}
+
+.bar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  background-color: #b9a8f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.fill {
+  background-color: #4324aa;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 0.5rem;
+  text-align: center;
+}
