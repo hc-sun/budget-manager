@@ -1,8 +1,8 @@
-import PurchaseItem from "./PurchaseItem";
 import "./Purchases.css";
 import Card from "../UI/Card";
 import PurchaseFilter from "./Filter.js";
 import React, { useState } from "react";
+import PurchaseList from './PurchaseList';
 
 function Purchases(props) {
   const [yearData, setYear] = useState("2023");
@@ -22,19 +22,7 @@ function Purchases(props) {
           selectedYearData={yearData}
           selectYear={selectYearHandler}
         />
-        {/* if length===0 show <p> else show <PurchaseItem> */}
-        {filteredPurchases.length === 0 ? (
-          <p>No purchases</p>
-        ) : (
-          filteredPurchases.map((purchase) => (
-            <PurchaseItem
-              key={purchase.id}
-              title={purchase.title}
-              price={purchase.price}
-              date={purchase.date}
-            />
-          ))
-        )}
+        <PurchaseList items={filteredPurchases} />
       </Card>
     </div>
   );

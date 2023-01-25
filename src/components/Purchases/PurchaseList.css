@@ -1,0 +1,9 @@
+.purchases-list {
+  list-style: none;
+  padding: 0;
+}
+
+.no-purchase {
+  color: white;
+  text-align: center;
+}
