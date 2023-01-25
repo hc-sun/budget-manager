@@ -11,7 +11,7 @@ function Purchases(props) {
     setYear(year);
   }
 
-  const filteredPurchases = props.items.filter(purchase => {
+  const filteredPurchases = props.items.filter((purchase) => {
     return purchase.date.getFullYear().toString() === yearData;
   });
 
@@ -22,14 +22,19 @@ function Purchases(props) {
           selectedYearData={yearData}
           selectYear={selectYearHandler}
         />
-        {filteredPurchases.map((purchase) => (
-          <PurchaseItem
-            key={purchase.id}
-            title={purchase.title}
-            price={purchase.price}
-            date={purchase.date}
-          />
-        ))}
+        {/* if length===0 show <p> else show <PurchaseItem> */}
+        {filteredPurchases.length === 0 ? (
+          <p>No purchases</p>
+        ) : (
+          filteredPurchases.map((purchase) => (
+            <PurchaseItem
+              key={purchase.id}
+              title={purchase.title}
+              price={purchase.price}
+              date={purchase.date}
+            />
+          ))
+        )}
       </Card>
     </div>
   );
