@@ -10,6 +10,11 @@ function Purchases(props) {
   function selectYearHandler(year) {
     setYear(year);
   }
+
+  const filteredPurchases = props.items.filter(purchase => {
+    return purchase.date.getFullYear().toString() === yearData;
+  });
+
   return (
     <div>
       <Card className="purchases">
@@ -17,7 +22,7 @@ function Purchases(props) {
           selectedYearData={yearData}
           selectYear={selectYearHandler}
         />
-        {props.items.map((purchase) => (
+        {filteredPurchases.map((purchase) => (
           <PurchaseItem
             key={purchase.id}
             title={purchase.title}
