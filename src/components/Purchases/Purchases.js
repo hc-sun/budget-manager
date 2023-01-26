@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import PurchaseFilter from "./Filter.js";
 import React, { useState } from "react";
 import PurchaseList from './PurchaseList';
+import PurchasesGraph from "./PurchasesGraph";
 
 function Purchases(props) {
   const [yearData, setYear] = useState("2023");
@@ -22,6 +23,7 @@ function Purchases(props) {
           selectedYearData={yearData}
           selectYear={selectYearHandler}
         />
+        <PurchasesGraph purchases={filteredPurchases} />
         <PurchaseList items={filteredPurchases} />
       </Card>
     </div>
